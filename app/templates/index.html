@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block title %}LuckyNest - Comfortable Living{% endblock %}
+
+{% block content %}
+
+<!-- CAROUSEL -->
+ <section class="carousel-section">
+    <div class="carousel">
+
+        <div class="carousel-slide active">
+            <div class="carousel-content">
+                <h1>Comfortable living in the heart of the city</h1>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="carousel-content">
+                <h1>All you meals taken care of</h1>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="carousel-content">
+                <h1>WiFi, Laundry, Housekeeping included</h1>
+            </div>
+        </div>
+
+        <!-- Previous/Next arrows -->
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">&#10095</button>
+
+        <!-- Dot indicators -->
+         <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+         </div>
+    </div>
+ </section>
+
+<!-- FEATURE STRIP -->
+ <section class="features-strip">
+    <div class="feature">
+        <h3>50 Rooms</h3>
+        <p>
+            we have 50 premium rooms with a range of single, double and 
+            triple for you to choose from
+        </p>
+    </div>
+    <div class="feature">
+        <h3>4 Floors</h3>
+        <p>
+            with our 4 floors you can choose between brilliant views or accessable living
+        </p>
+    </div>
+    <div class="feature">
+        <h3>Free WiFi</h3>
+        <p>
+            WiFi is free and included when you book a room. amazing download and upload
+            speeds at your disposal
+        </p>
+    </div>
+    <div class="feature">
+        <h3>from £70 a month</h3>
+        <p>
+            we offer affordable rooms for all types of guests starting from only
+            £70 per month
+        </p>
+    </div>
+ </section>
+
+ <!-- ROOM TYPES -->
+<section class="room-selection">
+    <h2>Our Rooms</h2>
+    <div class="room-cards">
+        <div class="room-card">
+            <div class="room-image-placeholder">Single Room Image</div>
+            <div class="room-card-body">
+                <h3>Single</h3>
+                <p>
+                    A beautiful living space with 
+                    an ensuite bathroom walk 
+                    with an optional walk in 
+                    wardrobe. Study or relaxation 
+                    desk. Warm heating for those 
+                    winter months.
+                </p>
+            </div>
+        </div>
+        <div class="room-card">
+            <div class="room-image-placeholder">Double Room Image</div>
+            <div class="room-card-body">
+                <h3>Double</h3>
+                <p>
+                    Want to move in with a friend? 
+                    Try our double room 
+                    which is perfect for 2 people. 
+                    Comes with 2 double beds 
+                    and a cosy living area with 
+                    cooking facilities
+                </p>
+            </div>
+        </div>
+        <div class="room-card">
+            <div class="room-image-placeholder">Triple Room Image</div>
+            <div class="room-card-body">
+                <h3>Triple</h3>
+                <p>
+                    Our largest rooms designed
+                    for 3 people. 3 large double 
+                    beds with 2 prestine 
+                    bathroooms.  
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

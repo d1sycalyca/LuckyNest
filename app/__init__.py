@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
+
 db = SQLAlchemy()
 
 login_manager = LoginManager()
@@ -31,6 +32,9 @@ def create_app():
         db.create_all()
 
     from .routes.auth import auth_bp
+    from .routes.main import main_bp
+
     app.register_blueprint(auth_bp, url_prefix='/auth')
+    app.register_blueprint(main_bp)
 
     return app
