@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}LuckyNest{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block styles %}{% endblock %}
 </head>
 <body>
     <nav class="navbar">
         <a href="/" class="navbar-brand">LuckyNest</a>
         <div class="nav-links">
             {% if current_user.is_authenticated %}
-                <span>Hello, {{ current_user.full_name }}</span>
+                <a href="{{ url_for('pg.dashboard') }}">Dashboard</a>
                 <a href="{{ url_for('auth.logout') }}">Log Out</a>
             {% else %}
                 <a href="{{ url_for('auth.login') }}">Log In</a>

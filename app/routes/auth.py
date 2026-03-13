@@ -9,7 +9,7 @@ auth_bp = Blueprint('auth', __name__)
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('auth.dashboard_redirect'))
+        return redirect(url_for('pg.dashboard'))
     
     if request.method == 'POST':
         email = request.form.get('email')
@@ -22,7 +22,7 @@ def login():
             return redirect(url_for('auth.login'))
         
         login_user(user)
-        return redirect(url_for('auth.dashboard_redirect'))
+        return redirect(url_for('pg.dashboard'))
     
     return render_template('auth/login.html')
 
@@ -71,12 +71,5 @@ def logout():
     flash('You have been logged out', 'success')
     return redirect(url_for('auth.login'))
 
-@auth_bp.route('/dashboard')
-@login_required
 def dashboard_redirect():
-    if current_user.role == 'owner':
-        return render_template('auth/dashboard.html', title='Owner Dashboard')
-    elif current_user.role == 'admin':
-        return render_template('auth/dashboard.html', title='Admin')
-    else:
-        return render_template('auth/dashboard.html', title='My Dashboard')
+    return redirect(url_for('pg.dashboard'))

@@ -3,6 +3,11 @@
 {% block title %}Login - LuckyNest{% endblock %}
 
 {% block content %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
 <div class="auth-card">
     <h2>Log In</h2>
 

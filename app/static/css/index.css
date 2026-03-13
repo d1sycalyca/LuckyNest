@@ -1,55 +1,3 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body { font-family: sans-serif; background: #f5f5f5; color: #333; }
-
-.navbar {
-    background: #2c3e50;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-brand { color: white; text-decoration: none; font-size: 1.4rem; font-weight: bold;}
-.nav-links a { color: white; text-decoration: none; margin-left: 1rem; }
-
-.container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-
-.auth-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 450px;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.auth-card h2 { margin-bottom: 1.5rem; }
-
-.form-group {margin-bottom: 1rem; }
-.form-group label { display: block; margin-bottom: 0.3rem; font-weight: bold; }
-.form-group input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
-
-.btn-primary {
-    background: #2c3e50;
-    color: white;
-    padding: 0.6rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 0.5rem;
-}
-
-.btn-primary:hover { background: #3d5166; }
-
-.flash-messages { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
-.alert { padding: 0.75rem 1rem; border-radius: 4px; margin-bottom: 0.5rem; }
-.alert-error { background: #fde8e8; color: #c0392b; }
-.alert-success { background: #e8f8e8; color: #27ae60; }
-.alert-info { background: #e8f0fe; color: #2471a3; }
-
 .full-width {
     width: 100vw;
     position: relative;
@@ -114,7 +62,7 @@ body { font-family: sans-serif; background: #f5f5f5; color: #333; }
 .carousel-btn.prev { left: 1rem; }
 .carousel-btn.next { right: 1rem; }
 
-.carousel-dots { 
+.carousel-dots {
     position: absolute;
     bottom: 1.2rem;
     width: 100%;
@@ -131,6 +79,7 @@ body { font-family: sans-serif; background: #f5f5f5; color: #333; }
     cursor: pointer;
     transition: background 0.2s;
 }
+
 .dot.active { background: white; }
 
 /* FEATURES STRIP */
@@ -192,7 +141,6 @@ body { font-family: sans-serif; background: #f5f5f5; color: #333; }
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* place holder for images */
 .room-image-placeholder {
     background: #dde1e5;
     height: 180px;
@@ -200,12 +148,10 @@ body { font-family: sans-serif; background: #f5f5f5; color: #333; }
     align-items: center;
     justify-content: center;
     color: #888;
-    font-size: 0.9;
+    font-size: 0.9rem;
 }
 
-.room-card-body {
-    padding: 1.2rem;
-}
+.room-card-body { padding: 1.2rem; }
 
 .room-card-body h3 {
     color: #2c3e50;

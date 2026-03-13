@@ -37,4 +37,7 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(main_bp)
 
+    from .routes.pg import pg_bp
+    app.register_blueprint(pg_bp, url_prefix='/pg')
+
     return app

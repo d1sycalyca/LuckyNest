@@ -1,0 +1,14 @@
+.auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 450px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.auth-card h2 { margin-bottom: 1.5rem; }
+
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.3rem; font-weight: bold; }
+.form-group input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }

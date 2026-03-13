@@ -4,6 +4,10 @@
 
 {% block content %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
 <!-- CAROUSEL -->
  <section class="carousel-section">
     <div class="carousel">
